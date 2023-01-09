@@ -1,0 +1,47 @@
+@use "./global/" as *;
+
+.cards {
+  margin: 50px 0;
+  padding: 0 5%;
+  text-align: center;
+  h4 {
+    color: $natural-dgrayish-blue;
+    letter-spacing: 2px;
+    font-family: "Fraunces", serif;
+  }
+  .card-container {
+    @include flex-column;
+    margin: 40px 0;
+
+    &-items {
+      margin: 30px 15px;
+    }
+
+    @media (min-width: 690px) {
+      flex-direction: row;
+    }
+
+    .card-img {
+      margin-bottom: 30px;
+      > img {
+        width: 80px;
+        border-radius: 50%;
+      }
+    }
+    .blue-text {
+      color: $dblue-text;
+      color: $dcyan-text;
+      color: $natural-vdark-grayish-blue;
+      line-height: 25px;
+      margin-bottom: 25px;
+    }
+    h5 {
+      color: $natural-dark-blue;
+      font-family: "Fraunces", serif;
+      margin-bottom: 10px;
+    }
+    .grey-text {
+      color: $natural-grayish-blue;
+    }
+  }
+}

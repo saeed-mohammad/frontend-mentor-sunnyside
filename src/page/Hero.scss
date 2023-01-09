@@ -1,0 +1,40 @@
+@use "../style/global" as *;
+.heroPage {
+  background-color: $natural-dark-blue;
+  background-image: url("../assets/images/mobile/image-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 80px;
+
+  @media (min-width: 578px) {
+    background-image: url("../assets/images/desktop/image-header.jpg");
+  }
+}
+//   .bg-img {
+//     position: absolute;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     z-index: -1;
+
+//     > img {
+//       width: 100%;
+//       height: auto;
+//     }
+
+//     .desk-img {
+//       display: none;
+
+//       @media (min-width: 578px) {
+//         display: block;
+//       }
+//     }
+//     .mob-img {
+//       display: block;
+//       @media (min-width: 578px) {
+//         display: none;
+//       }
+//     }
+//   }
+// }

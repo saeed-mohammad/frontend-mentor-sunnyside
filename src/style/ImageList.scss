@@ -1,0 +1,23 @@
+@use "./global/" as *;
+
+.images {
+  @include flex;
+  flex-wrap: wrap;
+
+  .img-container {
+    width: 50%;
+    @media (min-width: 815px) {
+      width: 25%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .d_image {
+      display: none;
+    }
+    .m_image {
+      display: block;
+    }
+  }
+}

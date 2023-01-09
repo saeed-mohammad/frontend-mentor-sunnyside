@@ -1,0 +1,26 @@
+@use "./global" as *;
+
+.hero {
+  .container {
+    @include flex-column;
+    text-align: center;
+
+    h2 {
+      color: $natural-white;
+      font-family: "Fraunces", serif;
+      font-size: 28px;
+      margin: 25px 0;
+      letter-spacing: 2px;
+
+      @media (min-width: 230px) {
+        font-size: clamp(30px, 6vw, 93px);
+      }
+    }
+    .arrow {
+      cursor: pointer;
+      @media (min-width: 480px) {
+        margin-top: 40px;
+      }
+    }
+  }
+}

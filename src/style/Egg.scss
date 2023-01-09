@@ -1,0 +1,108 @@
+@use "./global" as *;
+
+.eggGlass {
+  .section {
+    @include flex-column;
+
+    @media (min-width: 690px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .img {
+      width: 100%;
+    }
+
+    .content {
+      padding: 17px 20px;
+      background: $natural-white;
+      text-align: left;
+
+      @media (max-width: 689px) {
+        text-align: center;
+        padding: 50px 20px;
+      }
+      @media (min-width: 690px) {
+        max-width: 50%;
+        // padding: 7%; // on 830px p-left-right break
+      }
+
+      .content-wrap {
+        width: 80%;
+        margin-inline: auto;
+      }
+      h3 {
+        font-family: "Fraunces", serif;
+        color: $dcyan-text;
+        font-size: 25px;
+        margin-bottom: 25px;
+      }
+      p {
+        color: $natural-dgrayish-blue;
+        margin-bottom: 25px;
+        line-height: 30px;
+
+        @media (max-width: 915px) {
+          line-height: 25px;
+        }
+        @media (max-width: 715px) {
+          line-height: 20px;
+        }
+      }
+      a {
+        position: relative;
+        color: $natural-dark-blue;
+        font-family: "Fraunces", serif;
+
+        &::after {
+          @include position;
+          width: 100%;
+          height: 5px;
+          background: hsl(51deg, 100%, 49%);
+          left: 0;
+          bottom: 1px;
+          border-radius: 5px;
+          opacity: 0.3;
+        }
+      }
+    }
+    .glass {
+      a {
+        &::after {
+          background: $soft-red;
+        }
+      }
+    }
+    .img {
+      @media (min-width: 690px) {
+        // flex: 1;
+        // flex-basis: 50%;
+        max-width: 50%;
+      }
+
+      > img {
+        width: 100%;
+        height: auto;
+      }
+      .desktop_img {
+        display: none;
+
+        @media (min-width: 578px) {
+          display: block;
+        }
+      }
+      .mobile_img {
+        display: block;
+
+        @media (min-width: 578px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .section_2 {
+    @media (min-width: 690px) {
+      flex-direction: row-reverse;
+    }
+  }
+}
