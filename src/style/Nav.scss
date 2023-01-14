@@ -25,6 +25,9 @@ header {
       opacity: 1;
       z-index: 0;
       background: transparent;
+
+      transform: translateY(0);
+      visibility: visible;
     }
 
     &::after {
@@ -37,6 +40,10 @@ header {
       border-left: 25px solid transparent;
       border-right: 0px solid transparent;
       border-bottom: 30px solid $natural-white;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
     ul {
       @media (min-width: 768px) {
