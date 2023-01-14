@@ -18,7 +18,7 @@ const cards = [
   {
     profile_img: jennie,
     para: "Incredible end results! Our sales incresed over 400% when we worked with sunnyside Highly recommended!",
-    name: "jennie F.",
+    name: "Jennie F.",
     profile: "Business Owner",
   },
 ];

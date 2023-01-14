@@ -16,6 +16,9 @@ header {
     opacity: 0;
     z-index: -1;
 
+    visibility: hidden;
+    transform: translateY(-100px);
+
     @media (min-width: 768px) {
       position: static;
       width: initial;
@@ -71,9 +74,11 @@ header {
   }
   nav.active {
     transition: 0.3s linear;
+    transform: translateY(0);
     width: 90%;
     height: 323%;
     opacity: 1;
+    visibility: visible;
     z-index: 0;
   }
   .menu {

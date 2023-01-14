@@ -3,7 +3,7 @@ import content from "./List/ContentList";
 import "../style/Egg.scss";
 const Egg = () => {
   return (
-    <section className="eggGlass">
+    <section className="eggGlass" id="Egg">
       {content.map((ct, ind) => (
         <div className={`section ${ct.section}`} key={ind}>
           <div className="img">

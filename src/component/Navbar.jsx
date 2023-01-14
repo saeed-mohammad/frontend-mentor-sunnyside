@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo from "../assets/images/logo.svg";
 import hamburger from "../assets/images/icon-hamburger.svg";
 import "../style/Nav.scss";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const menuRef = useRef();
 
-  // const handleMenu = (e) => {
+  useEffect(() => {
+    const handleMenu = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setMenu(false);
+      }
+    };
+    document.addEventListener("mousedown", handleMenu);
 
-  //   if (e.target !== hamburger) {
-  //     nav.classList.remove("active");
-  //   }
-  // };
-  // const hamburger = document.getElementById("menu");
-  // const nav = document.getElementsByTagName("nav");
-  // document.addEventListener("click", handleMenu);
+    return () => {
+      document.removeEventListener("mousedown", handleMenu);
+    };
+  });
 
   return (
     <header>
@@ -41,7 +45,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <div className="menu" onClick={() => setMenu(!menu)}>
+      <div className="menu" ref={menuRef} onClick={() => setMenu(!menu)}>
         <img src={hamburger} alt="" />
       </div>
     </header>
